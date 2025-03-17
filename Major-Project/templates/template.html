@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>YouTube Transcript Fetcher</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5 text-center">YouTube Transcript Fetcher</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="video_url">Enter YouTube Video URL:</label>
+                <input type="text" class="form-control" id="video_url" name="video_url" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Transcript</button>
+        </form>
+
+        {% if transcript %}
+            <div class="mt-4">
+                <h4>Transcript:</h4>
+                <p>{{ transcript }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
